@@ -14,10 +14,8 @@
 */
 
 function celsiusToFahrenheit(celsius) {
-  let fahrenheit = (9 / 5) * celsius + 32;
-  return fahrenheit;
+  return Math.trunc(((9 / 5) * celsius + 32) * 100) / 100;
 }
 
 const degree = Number.parseFloat(prompt("Введите градусы Цельсия"));
-const result = `${degree}° C = ${celsiusToFahrenheit(degree)}° F`;
-alert(result);
+alert(`${degree}° C = ${celsiusToFahrenheit(degree)}° F`);
