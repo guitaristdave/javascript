@@ -131,3 +131,33 @@
 // } else {
 //   console.log(`А вы, я смотрю, хулиганите! ${num} - неверное значение.`);
 // }
+
+// const smth = 2345;
+// const lastNumber = smth % 10;
+// const thirdNumber = Math.trunc(smth / 10) % 10;
+// const secondNumber = Math.trunc(smth / 100) % 10;
+// const firstNumber = Math.trunc(smth / 1000);
+
+const msgCount = Number(prompt("Введите количество сообщений")); // msgCount > 0
+const msgModule = Math.abs(msgCount);
+
+// if (msgModule % 10 === 1 && msgModule % 100 !== 11) {
+//   console.log(`Вы отправили ${msgCount} сообщение`);
+// } else if (
+//   [2, 3, 4].includes(msgModule % 10) &&
+//   ![12, 13, 14].includes(msgModule % 100)
+// ) {
+//   console.log(`Вы отправили ${msgCount} сообщения`);
+// } else {
+//   console.log(`Вы отправили ${msgCount} сообщений`);
+// }
+
+if ([11, 12, 13, 14].includes(msgModule % 100)) {
+  console.log(`Вы отправили ${msgCount} сообщений`);
+} else if (msgModule % 10 === 1) {
+  console.log(`Вы отправили ${msgCount} сообщение`);
+} else if ([2, 3, 4].includes(msgModule % 10)) {
+  console.log(`Вы отправили ${msgCount} сообщения`);
+} else {
+  console.log(`Вы отправили ${msgCount} сообщений`);
+}
