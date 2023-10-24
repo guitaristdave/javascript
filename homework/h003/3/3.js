@@ -10,7 +10,7 @@
 три числа. Проверять их не нужно.
 */
 
-const nums = prompt("Введите 3 числа через пробел");
+const nums = prompt("Введите числа через пробел");
 const numsArray = nums.split(" ").map(Number);
 
 
