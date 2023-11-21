@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
     <title>Document</title>
-</head>
-<body>
-    <button>Click</button>
-</body>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff/0.5.0/diff.min.js"></script>
+    <textarea id="text1" rows="4" cols="50">Текст 1</textarea>
+    <textarea id="text2" rows="4" cols="50">Текст 2</textarea>
+    <button onclick="compareText()">Сравнить тексты</button>
+    <div id="difference"></div>
+    <script>
+        function compareText() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+        
+            var diff = JsDiff.diffChars(text1, text2);
+            var result = document.getElementById("difference");
+        
+            // Очищаем предыдущий результат
+            result.innerHTML = '';
+        
+            diff.forEach(function(part){
+                // part.added - добавленный текст, part.removed - удаленный текст
+                var color = part.added ? 'green' :
+                            part.removed ? 'red' : 'grey';
+                var span = document.createElement('span');
+                span.style.color = color;
+                span.appendChild(document.createTextNode(part.value));
+                result.appendChild(span);
+            });
+        }
+        </script>
+        
+  </body>
 </html>
