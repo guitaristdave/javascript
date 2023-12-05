@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #37003c;
+}
+
+.center {
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
+    padding-top: 60px;
+}
+
+
+
+#template {
+    display: none;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.title {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 60px;
+    background-color: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.team-crest {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.team-crest img {
+    height: 100%;
+}
+
+.team-name {
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #37003c;
+    
+}
+
+.team-manager {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #37003c;;
+}
+
+.team-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 5px;
+
+}
